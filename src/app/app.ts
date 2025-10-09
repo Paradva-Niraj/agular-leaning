@@ -8,5 +8,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('agular-leaning');
+  protected readonly title = signal('World');
+  name = "Niraj"
+  description = "i am a web devloper"
+  link = "https://niraj-paradva.vercel.app/"
 }
