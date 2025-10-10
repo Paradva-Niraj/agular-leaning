@@ -10,6 +10,6 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('World');
   name = "Niraj"
-  description = "i am a web devloper"
+  description = "i am a Full stack web devloper"
   link = "https://niraj-paradva.vercel.app/"
 }
