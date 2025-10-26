@@ -1,0 +1,23 @@
+.counter{
+    font-size: xx-large;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button{
+    height: 70px;
+    width: 70px;
+    font-size: 3vh;
+    border-radius: 50px;
+    border: 0.1px solid rgba(255, 192, 203, 0.695);
+}
+
+.button:hover{
+    background-color: aliceblue;
+    scale:calc(1.07);
+    cursor: pointer;
+}
