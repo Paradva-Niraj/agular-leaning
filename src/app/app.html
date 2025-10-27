@@ -182,7 +182,7 @@
   }
 </style>
 
-<main class="main">
+<main class="main {{color}}">
   <div class="content">
     <div class="left-side">
       <svg
@@ -328,8 +328,8 @@
         </a>
       </div>
     </div> -->
-    <div class="right-side">
-      <app-counter></app-counter>
+    <div class="right-side {{color}}">
+      <app-counter (buttonClicked)="changeColor($event)"></app-counter>
     </div>
   </div>
 </main>

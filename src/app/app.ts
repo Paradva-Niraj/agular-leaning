@@ -10,7 +10,30 @@ import { Counter } from './counter/counter';
 })
 export class App {
   protected readonly title = signal('World');
-  name = "Niraj"
-  description = "i am a Full stack web devloper"
-  link = "https://niraj-paradva.vercel.app/"
+  name = "Niraj";
+  description = "i am a Full stack web devloper";
+  link = "https://niraj-paradva.vercel.app/";
+  color = "red";
+
+  changeColor(val:String){
+    if(val=="add"){
+      this.color="red";
+      setTimeout(() => {
+        this.color = "pink"
+      }, 100);
+    }
+    else if(val == "minus"){
+      this.color="green";
+      setTimeout(() => {
+        this.color = "pink"
+      }, 100);
+    }
+    else{
+      this.color="yellow";
+      setTimeout(() => {
+        this.color = "pink"
+      }, 100);
+    }
+  }
+
 }
