@@ -13,9 +13,11 @@ export class App {
   name = "Niraj";
   description = "i am a Full stack web devloper";
   link = "https://niraj-paradva.vercel.app/";
-  color = "red";
+  color = "pink";
+  eventtype = "";
 
   changeColor(val:String){
+    this.eventtype = "click event"
     if(val=="add"){
       this.color="red";
       setTimeout(() => {
@@ -36,4 +38,15 @@ export class App {
     }
   }
 
+  handlefouse(event:any){
+    this.eventtype = "focus on input"
+  }
+
+  mouseleave(){
+    this.eventtype = "mouse leave"
+  }
+
+  mouseenter(){
+    this.eventtype = "mouse enter"
+  }
 }

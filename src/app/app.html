@@ -65,6 +65,7 @@
     width: 100%;
     min-height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1rem;
@@ -332,15 +333,14 @@
       <app-counter (buttonClicked)="changeColor($event)"></app-counter>
     </div>
   </div>
+<p>{{eventtype}}</p>
+  <div class="form" (mouseleave)="mouseleave()" (mouseenter)="mouseenter()">
+      <h2>Event form</h2>
+      <div>
+        <label for="">focus </label>
+        <input type="search" (focus)="handlefouse($event)" placeholder="enter any value"/>
+        
+      </div>
+  </div>
 </main>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
 <router-outlet />
