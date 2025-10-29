@@ -1,0 +1,10 @@
+ul{
+    list-style: none;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+}
