@@ -232,7 +232,7 @@
         </defs>
       </svg>
       <h1>Hello, {{ title() }}</h1>
-      <h2>i am {{name}}!</h2>
+      <h2>i am {{name.value}}!</h2>
       <p>connect me <a target="_blank" href={{link}}>nicxx</a></p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
@@ -330,7 +330,8 @@
       </div>
     </div> -->
     <div class="right-side {{color}}">
-      <app-counter (buttonClicked)="changeColor($event)"></app-counter>
+      <!-- <app-counter (buttonClicked)="changeColor($event)"></app-counter> -->
+      <router-outlet />
     </div>
   </div>
 <p>{{eventtype}}</p>
@@ -344,12 +345,47 @@
   </div>
   <div>
     <!-- <app-todo></app-todo> -->
-     <ul>
+    <h2>routing</h2> 
+    <ul>
       <li>
         <a routerLink="/todo">todos</a>
       </li>
+      <li>
+        <a routerLink="/counter">counter</a>
+      </li>
      </ul>
+    </div>
+    <div>
+      <h2>login</h2>
+      <form>
+        <div>
+          <label for="">username</label>
+          <input [formControl]="name" type="text" placeholder="enter username" />
+        </div>
+        <div>
+          <label for="">password</label>
+          <input type="password" [formControl]="password" />
+        </div>
+        <button type="button" (click)="submit()">submit</button>
+      </form>
+    </div>
+    <div>
+      <h2>register form grouping </h2>
+      <form [formGroup]="registerfrom" (ngSubmit)="groupsubmit()">
+        <div>
+          <label for="">username</label>
+          <input formControlName ="gname" type="text" placeholder="enter username" />
+        </div>
+        <div>
+          <label for="">password</label>
+          <input type="password" formControlName="gpass" />
+        </div>
+        <div>
+          <label for="">email</label>
+          <input type="email" formControlName="gmail" name="" id="" />
+        </div>
+        <button type="submit">submit</button>
+      </form>
     </div>
   </main>
   <!-- <router-outlet /> -->
-<router-outlet />

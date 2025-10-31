@@ -13,7 +13,7 @@ export class Counter {
 
   @Output() buttonClicked = new EventEmitter<String>();
 
-
+ 
   handleCounter(val: string) {
     if (val == 'plus') {
       this.count = this.count + 1;
