@@ -4,10 +4,11 @@ import { Counter } from './counter/counter';
 import { Todo } from './todo/todo';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
+import { DatePipe, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Counter,Todo,RouterLink,ReactiveFormsModule],
+  imports: [RouterOutlet,Counter,Todo,RouterLink,ReactiveFormsModule,DatePipe,UpperCasePipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -28,6 +29,19 @@ export class App {
     gpass: new FormControl(),
     gmail: new FormControl()
   })
+
+  //piping
+  date = new Date();
+
+  time(){
+    setInterval(() => {
+      this.date = new Date();
+    }, 1000);
+  }
+
+  constructor(){
+    this.time();
+  }
 
   changeColor(val:String){
     this.eventtype = "click event"

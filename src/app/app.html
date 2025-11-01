@@ -387,5 +387,12 @@
         <button type="submit">submit</button>
       </form>
     </div>
+    <div>
+      <h2>piping</h2>
+      <p>{{date| date}}</p>
+      <p>{{date| date:"fullDate" | uppercase}}</p>
+      <p>{{date| date:"hh:mm:ss"}}</p>
+      <!-- <button (click)="time()">click to start time</button> -->
+    </div>
   </main>
   <!-- <router-outlet /> -->
