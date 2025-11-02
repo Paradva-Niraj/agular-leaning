@@ -19,4 +19,15 @@ export class Todo {
     // console.log(id);
   }
 
+
+  //component life cycle methods
+  constructor(){
+    console.log("todo called");
+    
+  }
+
+  ngOnDestroy(){
+    console.log("destroy todo");
+  }
+
 }

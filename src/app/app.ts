@@ -43,6 +43,10 @@ export class App {
     this.time();
   }
 
+  ngOnInit(){
+    console.log("after constructor");
+  }
+
   changeColor(val:String){
     this.eventtype = "click event"
     if(val=="add"){
